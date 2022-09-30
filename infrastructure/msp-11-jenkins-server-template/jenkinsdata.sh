@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash 
 # update os
 yum update -y
 # set server hostname as jenkins-server
