@@ -33,9 +33,9 @@ spec:
           resources: {}
       initContainers:
         - name: init-config-server
-        image: busybox
-        command: ['sh', '-c', 'until nc -z config-server:8888; do echo waiting for config-server; sleep 2; done;']
-        imagePullSecrets:
+          image: busybox
+          command: ['sh', '-c', 'until nc -z config-server:8888; do echo waiting for config-server; sleep 2; done;']
+      imagePullSecrets:
         - name: regcred
       restartPolicy: Always
 status: {}
